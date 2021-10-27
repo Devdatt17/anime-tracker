@@ -1,0 +1,59 @@
+.App {
+  background-color: black;
+  color:#ffff;
+}
+
+.bg-color{
+  background: rgba(196, 196, 196, 0.1);
+}
+
+.main-container{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh; /* vh unit is used */
+  background-image: url(./assets/animeunsplash.jpg);
+  background-size: cover;
+  color:rgb(238, 119, 188);
+  text-shadow: 10px 1px 3px black;
+}
+
+.list-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.card-align{
+  display: flex;
+  flex-direction: row;
+}
+
+.anime-details{
+  text-align: center;
+  height:76vh;
+  border-radius: 5% 5% 0% 0%;
+}
+
+.anime-bg{
+  background-image:url('https://wallpaperaccess.com/full/349967.jpg');
+  background-size:cover;
+  border-radius:5% 5% 0% 0%;
+  width:100%;
+  height:60vh;
+}
+
+.anime-text{
+  color:#000;
+  background: #fff;
+}
+/*
+
+This CSS file has lots of bad practice
+
+- No consistent use of units
+
+*/
