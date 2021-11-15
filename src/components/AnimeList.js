@@ -13,7 +13,7 @@ const AnimeList = () => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     
     return (
-        <>
+        <div className="list-container">
             {
                 numbers.map(item => (
                     <Card className="m-4" color="secondary">
@@ -28,7 +28,7 @@ const AnimeList = () => {
                     </Card>
                 ))
             }
-        </>
+        </div>
 
     )
 }
