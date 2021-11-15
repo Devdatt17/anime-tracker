@@ -72,6 +72,7 @@ const AnimeDetails = () => {
                                             </FormGroup>
                                         </Form>
                                         <Button className="mt-3 mb-2 bg-primary">Update description</Button>
+                                        <Button className="mt-3 mb-2 m-4 bg-danger align">Delete description</Button>
                                     </Col> : <></>
                             }
 
