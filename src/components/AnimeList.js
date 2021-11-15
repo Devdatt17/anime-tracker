@@ -7,13 +7,69 @@ import {
     CardTitle,
     CardImg,
     Button,
+    Pagination,
+    PaginationLink,
+    PaginationItem
+
+
 } from 'reactstrap'
 
 const AnimeList = () => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    
+
     return (
         <div className="list-container">
+            <Pagination size="lg">
+                <PaginationItem>
+                    <PaginationLink
+                        first
+                        href="#"
+                    />
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink
+                        href="#"
+                        previous
+                    />
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        1
+                    </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        2
+                    </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        3
+                    </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        4
+                    </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        5
+                    </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink
+                        href="#"
+                        next
+                    />
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink
+                        href="#"
+                        last
+                    />
+                </PaginationItem>
+            </Pagination>
             {
                 numbers.map(item => (
                     <Card className="m-4" color="secondary">
@@ -28,7 +84,7 @@ const AnimeList = () => {
                     </Card>
                 ))
             }
-        </div>
+        </div >
 
     )
 }
