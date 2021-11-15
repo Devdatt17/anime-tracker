@@ -12,6 +12,8 @@ import {
     InputGroup
 } from 'reactstrap'
 
+import { Link } from 'react-router-dom'
+
 const AnimeNavbar = () => {
     return (
         <Navbar color="dark" dark className="mr-auto p-3">
@@ -29,7 +31,9 @@ const AnimeNavbar = () => {
                 </NavItem>
                 <NavItem>
                     <NavLink>
-                        <Button color="primary" size="md">Anime List</Button>
+                        <Button color="primary" size="md">
+                            <Link className="link" to="/animelist">Anime List</Link>
+                        </Button>
                     </NavLink>
                 </NavItem>
                 <NavItem>
