@@ -11,6 +11,10 @@ import {
 } from 'reactstrap';
 
 const AnimeDetails = () => {
+    const [dropDownOpen, setDropDownOpen] = React.useState(false);
+
+    const toggle = () => { setDropDownOpen(!dropDownOpen) }
+
     return (
         <>
             <Container className="my-4 mb-0 anime-details" fluid="xl">
@@ -37,31 +41,39 @@ const AnimeDetails = () => {
                                 Laboriosam alias nisi molestias corrupti velit, maiores sit illum veniam deserunt. Molestias vero deserunt hic, consequuntur saepe laboriosam, eligendi iusto dolor dolorum quas consequatur, ipsa doloribus pariatur accusantium maiores sapiente!
                                 <br />
                                 <br />
-                                Aut, vitae unde, minima, perspiciatis nihil consequuntur rem voluptatum tempore fugiat delectus ipsa atque id. Excepturi dignissimos culpa quidem facilis ipsam eos possimus non odio, aperiam magni beatae exercitationem ipsum?</p>
+                                Aut, vitae unde, minima, perspiciatis nihil consequuntur rem voluptatum tempore fugiat delectus ipsa atque id. Excepturi dignissimos culpa quidem facilis ipsam eos possimus non odio, aperiam magni beatae exercitationem ipsum?
+                            </p>
+
                             <Col className="border py-3 edit-text">
                                 <h5>Do you want to edit it out ?</h5>
-                                <Button className="m-2 bg-primary text-white">Edit the description</Button>
+                                <Button className="m-2 bg-primary text-white" onClick={toggle}>
+                                    Edit the description
+                                </Button>
                             </Col>
 
-                            <Col className="border rounded p-3 my-4">
-                                <Form className="text-left" xs="12">
-                                    <FormGroup>
-                                        <Label for="title">Anime Name</Label>
-                                        <Input
-                                            placeholder="Anime name"
-                                            type="text"
-                                        />
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <Label for="title">Anime Description</Label>
-                                        <Input
-                                            placeholder="Add description"
-                                            type="textarea"
-                                        />
-                                    </FormGroup>
-                                </Form>
-                                <Button className="mt-3 mb-2 bg-primary">Update description</Button>
-                            </Col>
+
+                            {
+                                dropDownOpen ?
+                                    <Col className="border rounded p-3 my-4">
+                                        <Form className="text-left" xs="12">
+                                            <FormGroup>
+                                                <Label for="title">Anime Name</Label>
+                                                <Input
+                                                    placeholder="Anime name...."
+                                                    type="text"
+                                                />
+                                            </FormGroup>
+                                            <FormGroup>
+                                                <Label for="title">Anime Description</Label>
+                                                <Input
+                                                    placeholder="Add description...."
+                                                    type="textarea"
+                                                />
+                                            </FormGroup>
+                                        </Form>
+                                        <Button className="mt-3 mb-2 bg-primary">Update description</Button>
+                                    </Col> : <></>
+                            }
 
                         </Col>
                         <Col xs="2"></Col>
