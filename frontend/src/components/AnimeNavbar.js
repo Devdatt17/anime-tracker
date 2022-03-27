@@ -32,6 +32,13 @@ const AnimeNavbar = () => {
                 <NavItem>
                     <NavLink>
                         <Button color="primary" size="md">
+                            <Link className="link" to="/newanime">Add New Anime</Link>
+                        </Button>
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink>
+                        <Button color="primary" size="md">
                             <Link className="link" to="/animelist">Anime List</Link>
                         </Button>
                     </NavLink>
